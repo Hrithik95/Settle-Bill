@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/5315e0a472.js" crossorigin="anonymous"></script>
+    <title>Settle Bill</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">Settle Your Bill</div>
+        <form class="insert">
+
+            <label id="total"><i class="fas fa-solid fa-coins"></i>Total Amount</label>
+            <input type="number" id="total" placeholder="add the total" onchange="totalBill(this.value)">
+            <label id="totalL"><i class="fas fa-regular fa-money-bill"></i>Cash</label>
+            <input type="number" id="cash" placeholder="add amount to be paid in cash" onchange="updateCard(this.value)">
+            <label id="totalL"><i class="fas fa-credit-card"></i>Online/Credit Card</label>
+            <input type="number" id="card" placeholder="add amount to be paid in card" onchange="updateCash(this.value)">
+            
+            <div class="buttonSpace">
+                <span id="settleBtn" onclick="handleSubmit()">Settle</span>
+                <span id="resetBtn" onclick="handleReset()">Reset</span>
+            </div>
+            <div id="successPrompt"></div>
+        </form>
+    </div>
+    <script src="action.js"></script>
+</body>
+</html>
